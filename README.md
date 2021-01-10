@@ -1,1 +1,1 @@
-# textes-philosophie
+[Base de données de textes philosophiques](https://eyssette.github.io/textes-philosophie/)

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Textes philosophiques</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <script src="https://cdn.jsdelivr.net/combine/npm/mark.js@8.11.1,npm/papaparse@5.3.0"></script>
+</head>
+<body>
+<h1>Textes philosophiques</h1>
+<div id="recherches">
+<label for="recherche_dans_le_sujet">Rechercher dans le sujet :</label>
+<input type="text" id="recherche_dans_le_sujet" name="recherche_dans_le_sujet">
+<p>Vous pouvez mettre par exemple "Spinoza+lib" pour rechercher tous les textes de Spinoza qui contiennent "lib" (pour "liberté", "libération", "libérer"…)</p>
+</div>
+  <div id="content"><p>Chargement de la base de données …</p></div>
+</body>
+<script src="./js/parse_data-textes.min.js"></script>
+</html>
