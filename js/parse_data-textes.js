@@ -9,7 +9,7 @@ var table_body;
 table_start = "<table>";
 table_header = "<thead><tr><th>Textes</th></tr></thead>";
 table_end = "</table>";
-Papa.parse("https://raw.githubusercontent.com/eyssette/textes-philosophie/main/data/textes.tsv", {
+Papa.parse("https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes.tsv", {
 	download: true,
 	header: false,
 	delimiter: "    ",
