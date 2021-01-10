@@ -7,7 +7,7 @@ var table_content;
 var table_header;
 var table_body;
 table_start = "<table>";
-table_header = "<thead><tr>";
+table_header = "<thead><tr><th>Textes</th></tr></thead>";
 table_end = "</table>";
 Papa.parse("https://raw.githubusercontent.com/eyssette/textes-philosophie/main/data/textes.tsv", {
 	download: true,
@@ -15,11 +15,6 @@ Papa.parse("https://raw.githubusercontent.com/eyssette/textes-philosophie/main/d
 	delimiter: "    ",
 	complete: function(results) {
 		rows = results.data;
-		title = rows[0][0].split("\t");
-		title.forEach((element) => {
-			table_header = table_header + "<th>" + element + "</th>";
-		});
-		table_header = table_header + "</tr></thead>";
 		rows = rows.splice(1, rows.length);
 		table_body = "<tbody>";
 		rows.forEach((element) => {
@@ -50,7 +45,7 @@ function handleInput(e) {
 		table_body = "<tbody>";
 		rows.forEach((element) => {
 			cellules = element[0].split("\t");
-			if (checker(cellules[4].toLowerCase(), search_items)) {
+			if (checker(cellules[0].toLowerCase(), search_items)) {
 				table_body = table_body + "<tr>";
 				cellules.forEach((cell) => {
 					table_body = table_body + "<td>" + cell + "</td>";

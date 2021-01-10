@@ -46,15 +46,22 @@ table {
   border-radius: .25rem;
   table-layout: fixed;
   width: 80%;
-  max-width: 1200px;
+  max-width: 850px;
   line-height: 25px;
 }
 
+th {
+  font-weight: 600;
+  width:100%;
+}
 
-td:last-child {
+
+td {
   text-align: justify;
   padding-top: 15px!important;
   padding-bottom: 15px!important;
+  padding-left:30px;
+  padding-right:30px;
 }
 
 br {
@@ -69,19 +76,6 @@ thead tr:first-child {
   border: none;
 }
 
-th:nth-child(1),
-th:nth-child(2) {
-  width: 70px!important;
-}
-
-th:nth-child(3) {
-  width: 145px!important;
-  font-size: 0.8em;
-}
-
-th:nth-child(4) {
-  width: 150px!important;
-}
 
 b {
   font-weight: 600;
@@ -92,19 +86,6 @@ strong {
   font-size:0.93em;
 }
 
-th:first-child,
-td:first-child {
-  padding: 0 15px 0 20px;
-}
-
-th,
-td {
-  padding-left: 30px!important;
-}
-
-th {
-  font-weight: 600;
-}
 
 thead tr:last-child th {
   border-bottom: 3px solid #ddd;
@@ -121,11 +102,6 @@ tbody tr:last-child td {
 
 tbody td {
   border-bottom: 1px solid #ddd;
-}
-
-th:last-child,
-td:last-child {
-  padding-right: 30px;
 }
 
 .button {
