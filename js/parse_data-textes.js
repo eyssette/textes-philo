@@ -1,15 +1,9 @@
 var rows;
 var title;
 var content;
-var table_start;
-var table_end;
-var table_content;
-var table_header;
 var table_body;
-table_start = "<table>";
-table_header = "<thead><tr><th>Textes</th></tr></thead>";
-table_end = "</table>";
-Papa.parse("https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes.tsv", {
+var table_body_start = document.getElementsByTagName("tbody")[0].innerHTML;
+Papa.parse("/main/data/textes.tsv", {
 	download: true,
 	header: false,
 	delimiter: "    ",
@@ -27,8 +21,6 @@ Papa.parse("https://raw.githubusercontent.com/eyssette/textes-philo/main/data/te
 			table_body = table_body + "</tr>";
 		});
 		table_body = table_body + "</tbody>";
-		content = table_start + table_header + table_body + table_end;
-		document.getElementById("content").innerHTML = content;
 	}
 });
 var input = document.getElementById("recherche_dans_le_sujet");
@@ -41,6 +33,7 @@ function handleInput(e) {
 		window.clearTimeout(this.timer);
 	}
 	this.timer = window.setTimeout(function() {
+		if (search) {
 		search_items = search.split("+");
 		table_body = "<tbody>";
 		rows.forEach((element) => {
@@ -60,5 +53,8 @@ function handleInput(e) {
 		instance.mark(search_items, options = {
 			"accuracy": "complementary", "separateWordSearch": false
 		});
+	} else {
+		document.getElementsByTagName("tbody")[0].innerHTML = table_body_start;
+	}
 	}, 300);
 }
