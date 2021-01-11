@@ -3,7 +3,7 @@ var title;
 var content;
 var table_body;
 var table_body_start = document.getElementsByTagName("tbody")[0].innerHTML;
-Papa.parse("/main/data/textes.tsv", {
+Papa.parse("/data/textes.tsv", {
 	download: true,
 	header: false,
 	delimiter: "    ",
