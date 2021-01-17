@@ -5,7 +5,7 @@ var content;
 var table_body;
 var table_body_start = document.getElementsByTagName("tbody")[0].innerHTML;
 
-var urls =  ['https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-s1.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-s2.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-s3.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-bac.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-ce.tsv']
+var urls =  ['https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-s1.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-s2.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-s3.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-s3.ts4', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-s5.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-bac.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-ce.tsv']
 
 Promise.all(
   urls
