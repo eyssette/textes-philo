@@ -28,7 +28,10 @@ Promise.all(
 )
 .then(
   function (results) {
-		rows=results[0].data.concat(results[1].data).concat(results[2].data).concat(results[3].data).concat(results[4].data);
+		rows=results[0].data;	
+		for (let i = 1; i < urls.length; i++) {
+			rows = rows.concat(results[i].data);
+		};
 		table_body = "<tbody>";
 		rows.forEach((element) => {
 			recherche = document.getElementById("recherche_dans_le_sujet").value;
