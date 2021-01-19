@@ -2,8 +2,8 @@ var rows;
 var allResults;
 var title;
 var content;
-var table_body;
-var table_body_start = document.getElementsByTagName("tbody")[0].innerHTML;
+var tableBody;
+var tableBodyStart = document.getElementsByTagName("tbody")[0].innerHTML;
 
 var urls =  ['https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-ce.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-gren.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-maphil.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-mater.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-collected.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-haut.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-bac.tsv']
 
@@ -32,17 +32,17 @@ Promise.all(
 		for (let i = 1; i < urls.length; i++) {
 			rows = rows.concat(results[i].data);
 		};
-		table_body = "<tbody>";
+		tableBody = "<tbody>";
 		rows.forEach((element) => {
 			recherche = document.getElementById("recherche_dans_le_sujet").value;
-			table_body = table_body + "<tr>";
+			tableBody = tableBody + "<tr>";
 			cellules = element[0].split("\t");
 			cellules.forEach((cell) => {
-				table_body = table_body + "<td>" + cell + "</td>";
+				tableBody = tableBody + "<td>" + cell + "</td>";
 			});
-			table_body = table_body + "</tr>";
+			tableBody = tableBody + "</tr>";
 		});
-		table_body = table_body + "</tbody>";
+		tableBody = tableBody + "</tbody>";
   }
 )
 .catch(//log the error
@@ -59,32 +59,32 @@ function handleInput(e) {
 		window.clearTimeout(this.timer);
 	}
 	this.timer = window.setTimeout(function() {
-		if (searchInput) {
-		search_items = searchInput.split("+");
+		if (searchInput.length>2) {
+		 searchItems = searchInput.split("+");
 
-		table_body = "<tbody>";
+		tableBody = "<tbody>";
 		rows.forEach((element) => {
 				cellules = element[0].split("\t");
 				texte='« '+cellules[2]+' »';
-				if (checker(cellules.toString().toLowerCase(), search_items)) {
-					table_body = table_body + "<tr>";
+				if (checker(cellules.toString().toLowerCase(),  searchItems)) {
+					tableBody = tableBody + "<tr>";
 					auteur='<br/><b>'+cellules[0]+'</b>';
 					if(cellules[1]){reference=', '+cellules[1]} else{reference=''};
 					if(cellules[3]){precisions='<br/>'+cellules[3]} else{precisions=''};
-						table_body = table_body + "<td>" +texte+auteur+reference+precisions + "</td>";
+						tableBody = tableBody + "<td>" +texte+auteur+reference+precisions + "</td>";
 					
-				table_body = table_body + "</tr>";
+				tableBody = tableBody + "</tr>";
 			}
 		});
-		table_body = table_body + "</tbody>";
-		document.getElementsByTagName("tbody")[0].innerHTML = table_body;
+		tableBody = tableBody + "</tbody>";
+		document.getElementsByTagName("tbody")[0].innerHTML = tableBody;
 		var context = document.getElementById("content");
 		var instance = new Mark(context);
-		instance.mark(search_items, options = {
+		instance.mark( searchItems, options = {
 			"accuracy": "complementary", "separateWordSearch": false
 		});
 	} else {
-		document.getElementsByTagName("tbody")[0].innerHTML = table_body_start;
+		document.getElementsByTagName("tbody")[0].innerHTML = tableBodyStart;
 	}
 	}, 300);
 }
