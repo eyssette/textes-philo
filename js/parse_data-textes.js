@@ -32,17 +32,6 @@ Promise.all(
 		for (let i = 1; i < urls.length; i++) {
 			rows = rows.concat(results[i].data);
 		};
-		tableBody = "<tbody>";
-		rows.forEach((element) => {
-			recherche = document.getElementById("recherche_dans_le_sujet").value;
-			tableBody = tableBody + "<tr>";
-			cellules = element[0].split("\t");
-			cellules.forEach((cell) => {
-				tableBody = tableBody + "<td>" + cell + "</td>";
-			});
-			tableBody = tableBody + "</tr>";
-		});
-		tableBody = tableBody + "</tbody>";
   }
 )
 .catch(//log the error
