@@ -66,7 +66,7 @@ function handleInput(e) {
 					auteur='<br/><b>'+cellules[0]+'</b>';
 					if(cellules[1]){reference=', '+cellules[1]} else{reference=''};
 					if(cellules[3]){precisions='<br/>'+cellules[3]} else{precisions=''};
-						tableBody = tableBody + "<td>" +texte+auteur+reference+precisions + "</td>";
+						tableBody = tableBody + "<td>"+auteur+"</td>"+"<td>" +texte+auteur+reference+precisions + "</td>"+"<td>"+scorePertinence+"</td>";
 					
 				tableBody = tableBody + "</tr>";
 			}
@@ -78,6 +78,8 @@ function handleInput(e) {
 		instance.mark( searchItems, options = {
 			"accuracy": "complementary", "separateWordSearch": false
 		});
+		fdTableSort.init("textes");
+		fdTableSort.jsWrapper("textes", [2,0]);
 	} else {
 		document.getElementsByTagName("tbody")[0].innerHTML = tableBodyStart;
 	}
