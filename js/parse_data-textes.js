@@ -50,12 +50,18 @@ function handleInput(e) {
 	this.timer = window.setTimeout(function() {
 		if (searchInput.length>2) {
 		 searchItems = searchInput.split("+");
-
 		tableBody = "<tbody>";
+
 		rows.forEach((element) => {
 				cellules = element[0].split("\t");
-				texte='« '+cellules[2]+' »';
-				if (checker(cellules.toString().toLowerCase(),  searchItems)) {
+				source=cellules.toString().toLowerCase();
+				if (checker(source,  searchItems)) {
+					scorePertinence=0;
+					searchItems.forEach((search_item) => {
+						nombreOccurrences = source.split(search_item).length - 1;
+						scorePertinence=scorePertinence+nombreOccurrences;
+					});
+					texte='« '+cellules[2]+' »';
 					tableBody = tableBody + "<tr>";
 					auteur='<br/><b>'+cellules[0]+'</b>';
 					if(cellules[1]){reference=', '+cellules[1]} else{reference=''};
