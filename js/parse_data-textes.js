@@ -83,5 +83,5 @@ function handleInput(e) {
 	} else {
 		document.getElementsByTagName("tbody")[0].innerHTML = tableBodyStart;
 	}
-	}, 400);
+	}, 350);
 }
