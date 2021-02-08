@@ -91,10 +91,15 @@ function handleInput(e) {
 		tableBody = tableBody + "</tbody>";
 		document.getElementsByTagName("tbody")[0].innerHTML = tableBody;
 		var context = document.getElementById("content");
-		var instance = new Mark(context);
-		instance.mark( searchItems, options = {
-			"accuracy": "complementary", "separateWordSearch": false
+		i_search=1;
+		searchItems.forEach((search_item) => {
+			var instance = new Mark(context);
+			instance.mark( search_item, options = {
+			"element": "span", "className":"match"+i_search, "accuracy": "complementary", "separateWordSearch": false
+			});
+			i_search=i_search+1;
 		});
+
 		fdTableSort.init("textes");
 		fdTableSort.jsWrapper("textes", [2,0]);
 	} else {

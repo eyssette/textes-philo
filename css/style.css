@@ -139,6 +139,16 @@ tbody td {
   color: #dc2a2a;
 }
 
-mark{
+
+.match1{
   background: #FFF6B3;
+}
+.match2{
+  background: #c3e7f5;
+}
+.match3{
+  background: #befadc;
+}
+.match4, .match5, .match6{
+  background: #d2c3fa;
 }
