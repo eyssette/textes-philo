@@ -61,7 +61,7 @@ function handleInput(e) {
 						regex = new RegExp('\\b'+search_item+'\\b','gi');
 						
 						nombreOccurrencesTexte = cellules[2].toLowerCase().split(search_item).length - 1
-						nombreOccurrencesTextePerfectMatch = ((cellules[0].toLowerCase().match(regex) || []).length)*2
+						nombreOccurrencesTextePerfectMatch = ((cellules[2].toLowerCase().match(regex) || []).length)*2
 						scorePertinence=scorePertinence+((nombreOccurrencesTexte+nombreOccurrencesTextePerfectMatch)*2);
 						
 						nombreOccurrencesAuteur = cellules[0].toLowerCase().split(search_item).length - 1;
