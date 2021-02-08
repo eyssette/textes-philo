@@ -58,8 +58,21 @@ function handleInput(e) {
 				if (checker(source,  searchItems)) {
 					scorePertinence=0;
 					searchItems.forEach((search_item) => {
-						nombreOccurrences = source.split(search_item).length - 1;
-						scorePertinence=scorePertinence+nombreOccurrences;
+						regex = new RegExp('\\b'+search_item+'\\b','gi');
+						nombreOccurrencesTexte = cellules[2].toLowerCase().split(search_item).length - 1
+						nombreOccurrencesTextePerfectMatch = nombreOccurrencesTexte+((cellules[0].toLowerCase().match(regex) || []).length)*2
+						scorePertinence=scorePertinence+((nombreOccurrencesTexte+nombreOccurrencesTextePerfectMatch)*2);
+						nombreOccurrencesAuteur = cellules[0].toLowerCase().split(search_item).length - 1;
+						nombreOccurrencesAuteurPerfectMatch = nombreOccurrencesAuteur+((cellules[0].toLowerCase().match(regex) || []).length)*2
+						scorePertinence=scorePertinence+((nombreOccurrencesAuteur+nombreOccurrencesAuteurPerfectMatch)*3);
+						if(cellules[3]){
+							nombreOccurrencesPrecisions = cellules[3].toLowerCase().split(search_item).length - 1;
+							scorePertinence=scorePertinence+nombreOccurrencesPrecisions;
+						}
+						if(cellules[1]) {
+							nombreOccurrencesReference = cellules[1].toLowerCase().split(search_item).length - 1;
+							scorePertinence=scorePertinence+nombreOccurrencesReference;
+						}
 					});
 					texte='« '+cellules[2]+' »';
 					tableBody = tableBody + "<tr>";
