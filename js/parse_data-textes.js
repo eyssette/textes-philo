@@ -49,7 +49,7 @@ function handleInput(e) {
 	}
 	this.timer = window.setTimeout(function() {
 		if (searchInput.length>2) {
-		 searchItems = searchInput.split("+");
+		searchItems = searchInput.split("+");
 		tableBody = "<tbody>";
 
 		rows.forEach((element) => {
