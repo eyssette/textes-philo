@@ -15,5 +15,7 @@ dictionnaire <- dictionary(list(
 
 
 matrice=convert(dfm(corpusphilo, dictionary = dictionnaire, valuetype = "glob", case_insensitive = TRUE), "matrix")
-
-write.table(matrice, file='test.tsv', quote=FALSE, sep='\t')
+basecomplete=cbind(donnees, matrice)
+basecomplete=basecomplete[-c(1)]
+basecomplete=basecomplete[c(2,3,1,4,5,6,7,8,9,10)]
+write.table(basecomplete, file='test.tsv', quote=FALSE, sep='\t')
