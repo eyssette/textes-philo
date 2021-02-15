@@ -1,5 +1,5 @@
 library("quanteda")
-library(readtext)
+library("readtext")
 
 donnees=readtext("https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes.tsv", text_field = "Texte", quote="", fill=TRUE)
 corpusphilo=corpus(donnees)
