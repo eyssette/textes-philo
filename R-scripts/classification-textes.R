@@ -1,7 +1,7 @@
 library("quanteda")
 library("readtext")
 
-donnees=readtext("/Users/cedric.eyssette/Documents/GitHub/textes-philosophie/data/textes.tsv", text_field = "Texte", quote="", fill=TRUE)
+donnees=readtext("https://github.com/eyssette/textes-philo/blob/main/data/textes.tsv?raw=true", text_field = "Texte", quote="", fill=TRUE)
 corpusphilo=corpus(donnees)
 
 dictionnaire <- dictionary(list(
