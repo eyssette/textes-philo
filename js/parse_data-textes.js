@@ -5,7 +5,7 @@ var content;
 var tableBody;
 var tableBodyStart = document.getElementsByTagName("tbody")[0].innerHTML;
 
-var urls =  ['https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-ce.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-gren.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-maphil.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-mater.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-collected.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-haut.tsv', 'https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-bac.tsv']
+var urls =  ['https://raw.githubusercontent.com/eyssette/textes-philo/main/data/textes-FINAL.tsv']
 
 Promise.all(
   urls
@@ -32,6 +32,7 @@ Promise.all(
 		for (let i = 1; i < urls.length; i++) {
 			rows = rows.concat(results[i].data);
 		};
+		rows = rows.splice(1, rows.length);
   }
 )
 .catch(//log the error
@@ -83,7 +84,13 @@ function handleInput(e) {
 					auteur='<br/><b>'+cellules[0]+'</b>';
 					if(cellules[1]){reference=', '+cellules[1]} else{reference=''};
 					if(cellules[3]){precisions='<br/>'+cellules[3]} else{precisions=''};
-						tableBody = tableBody + "<td>"+auteur+"</td>"+"<td>" +texte+auteur+reference+precisions + "</td>"+"<td>"+scorePertinence+"</td>";
+					c1='<td>'+cellules[4]+'</td>';
+					c2='<td>'+cellules[5]+'</td>';
+					c3='<td>'+cellules[6]+'</td>';
+					c4='<td>'+cellules[7]+'</td>';
+					c5='<td>'+cellules[8]+'</td>';
+					c6='<td>'+cellules[9]+'</td>';
+						tableBody = tableBody + "<td>"+auteur+"</td>"+"<td>" +texte+auteur+reference+precisions+ "</td>"+"<td>"+scorePertinence+"</td>"+c1+c2+c3+c4+c5+c6;
 					
 				tableBody = tableBody + "</tr>";
 			}
