@@ -84,12 +84,12 @@ function handleInput(e) {
 					auteur='<br/><b>'+cellules[0]+'</b>';
 					if(cellules[1]){reference=', '+cellules[1]} else{reference=''};
 					if(cellules[3]){precisions='<br/>'+cellules[3]} else{precisions=''};
-					c1='<td>'+cellules[4]+'</td>';
-					c2='<td>'+cellules[5]+'</td>';
-					c3='<td>'+cellules[6]+'</td>';
-					c4='<td>'+cellules[7]+'</td>';
-					c5='<td>'+cellules[8]+'</td>';
-					c6='<td>'+cellules[9]+'</td>';
+					c1='<td><span class="tooltip">'+cellules[4]+'<span class="tooltiptext">Éthique et philosophie morale</span></span>'+'</td>';
+					c2='<td><span class="tooltip">'+cellules[5]+'<span class="tooltiptext">Philosophie de l\'esprit</span></span>'+'</td>';
+					c3='<td><span class="tooltip">'+cellules[6]+'<span class="tooltiptext">Philosophie de la culture</span></span>'+'</td>';
+					c4='<td><span class="tooltip">'+cellules[7]+'<span class="tooltiptext">Philosophie sociale et politique</span></span>'+'</td>';
+					c5='<td><span class="tooltip">'+cellules[8]+'<span class="tooltiptext">Épistémologie et métaphysique</span></span>'+'</td>';
+					c6='<td><span class="tooltip">'+cellules[9]+'<span class="tooltiptext">Philosophie du langage</span></span>'+'</td>';
 						tableBody = tableBody + "<td>"+auteur+"</td>"+"<td>" +texte+auteur+reference+precisions+ "</td>"+"<td>"+scorePertinence+"</td>"+c1+c2+c3+c4+c5+c6;
 					
 				tableBody = tableBody + "</tr>";
