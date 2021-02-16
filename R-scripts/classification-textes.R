@@ -18,4 +18,4 @@ matrice=convert(dfm(corpusphilo, dictionary = dictionnaire, valuetype = "glob", 
 basecomplete=cbind(donnees, matrice)
 basecomplete=basecomplete[-c(1)]
 basecomplete=basecomplete[c(2,3,1,4,5,6,7,8,9,10)]
-write.table(basecomplete, file='textes-final.tsv', quote=FALSE, sep='\t', row.names = FALSE)
+write.table(basecomplete, file='textes-FINAL.tsv', quote=FALSE, sep='\t', row.names = FALSE)
