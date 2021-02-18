@@ -13,6 +13,9 @@ calcul_distance <- function(x, y){
 matrice_distances=data.frame("Row1","Row2","Distance")
 
 combinatoire=combn(nrow(textes),2, simplify=FALSE)
+
+# Attention, calcul très long à effectuer
+
 for (i in 1:length(combinatoire)) {
   combinatoire_i=strsplit(as.character(combinatoire[[i]])," ")
   combinatoire_i1=as.numeric(combinatoire_i[1])
