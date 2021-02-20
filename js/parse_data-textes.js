@@ -59,7 +59,7 @@ function handleInput(e) {
 				if (checker(source,  searchItems)) {
 					scorePertinence=0;
 					searchItems.forEach((search_item) => {
-						regex = new RegExp('\\b'+search_item+'\\b','gi');
+						regex = new RegExp('\\b'+search_item+'\\b|\\b'+search_item+'s\\b','gi');
 						
 						nombreOccurrencesTexte = cellules[2].toLowerCase().split(search_item).length - 1
 						nombreOccurrencesTextePerfectMatch = ((cellules[2].toLowerCase().match(regex) || []).length)*2
@@ -67,7 +67,7 @@ function handleInput(e) {
 						
 						nombreOccurrencesAuteur = cellules[0].toLowerCase().split(search_item).length - 1;
 						nombreOccurrencesAuteurPerfectMatch = ((cellules[0].toLowerCase().match(regex) || []).length)*2
-						scorePertinence=scorePertinence+((nombreOccurrencesAuteur+nombreOccurrencesAuteurPerfectMatch)*3);
+						scorePertinence=scorePertinence+((nombreOccurrencesAuteur+nombreOccurrencesAuteurPerfectMatch)*4);
 						
 						if(cellules[3]){
 							nombreOccurrencesPrecisions = cellules[3].toLowerCase().split(search_item).length - 1;
