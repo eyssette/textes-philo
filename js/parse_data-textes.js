@@ -39,12 +39,20 @@ Promise.all(
   err=>console.warn("Something went wrong:",err)
 )
 
+var input = document.getElementById("recherche_dans_le_sujet");
 var boutonRecherche = document.getElementById("rechercher");
 boutonRecherche.onclick = handleInput;
+  input.addEventListener("keyup", function(event) {
+    if (event.code === 'Enter') {
+		document.getElementsByTagName("tbody")[0].innerHTML = '<td></td><td><span class="loader"></span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>';
+		boutonRecherche.click();
+    }
+});
+
+
 let checker = (arr, target) => target.every((v) => arr.includes(v));
 
 function handleInput(e) {
-	var input = document.getElementById("recherche_dans_le_sujet");
 	var searchInput = input.value.toLowerCase();
 	if (this.timer) {
 		window.clearTimeout(this.timer);
