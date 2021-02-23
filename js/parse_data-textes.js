@@ -39,11 +39,12 @@ Promise.all(
   err=>console.warn("Something went wrong:",err)
 )
 
-var input = document.getElementById("recherche_dans_le_sujet");
-input.oninput = handleInput;
+var boutonRecherche = document.getElementById("rechercher");
+boutonRecherche.onclick = handleInput;
 let checker = (arr, target) => target.every((v) => arr.includes(v));
 
 function handleInput(e) {
+	var input = document.getElementById("recherche_dans_le_sujet");
 	var searchInput = input.value.toLowerCase();
 	if (this.timer) {
 		window.clearTimeout(this.timer);
