@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8">
   <title>Textes philosophiques</title>
@@ -7,36 +8,78 @@
   <script src="https://cdn.jsdelivr.net/combine/npm/mark.js@8.11.1,npm/papaparse@5.3.0"></script>
   <script type="text/javascript" src="./js/tablesort.js"></script>
 </head>
+
 <body>
-<h1>Textes philosophiques</h1>
-<div id="recherches">
-<label for="recherche_dans_le_sujet">Rechercher dans le sujet :</label>
-<input type="text" id="recherche_dans_le_sujet" name="recherche_dans_le_sujet"> <button id="rechercher">OK</button>
-<p>Vous pouvez mettre par exemple <b>Spinoza+lib</b> pour rechercher tous les textes de Spinoza qui contiennent "lib" (pour "liberté", "libération", "libérer"…). Les textes sont automatiquement <b>classés par score de pertinence</b>, puis par auteur⸱e. Vous pouvez <b>cliquer sur un titre de colonne</b> pour changer l'ordre de classement : par auteur, par catégories, ou à nouveau par score de pertinence</p>
-<p>Ce moteur de recherche permet de trouver des textes parmi une sélection personnelle de textes, ainsi que plusieurs bases de données : archives des sujets de baccalauréat, <a href="http://www.ac-grenoble.fr/PhiloSophie/old2/bases/search.php">sélection de l'académie de Grenoble</a>, <a href="https://philo52.com/">philo52</a>, <a href="http://www.maphilosophie.fr/base_textes.php">maphilosophie</a>, <a href="http://materiaphilosophica.blogspot.com/">materiaphilosophica</a>, …</p>
-</div>
+  <h1>Textes philosophiques</h1>
+  <div id="recherches">
+    <label for="recherche_dans_le_sujet">Rechercher dans le sujet :</label>
+    <input type="text" id="recherche_dans_le_sujet" name="recherche_dans_le_sujet" size="48"> <button
+      id="rechercher">OK</button>
+    <p>Vous pouvez mettre par exemple <b>Spinoza+lib</b> pour rechercher tous les textes de Spinoza qui contiennent
+      "lib" (pour "liberté", "libération", "libérer"…). Les textes sont automatiquement <b>classés par score de
+        pertinence</b>, puis par auteur⸱e. Vous pouvez <b>cliquer sur un titre de colonne</b> pour changer l'ordre de
+      classement : par auteur, par catégories, ou à nouveau par score de pertinence</p>
+    <p>Ce moteur de recherche permet de trouver des textes parmi une sélection personnelle de textes, ainsi que
+      plusieurs bases de données : archives des sujets de baccalauréat, <a
+        href="http://www.ac-grenoble.fr/PhiloSophie/old2/bases/search.php">sélection de l'académie de Grenoble</a>, <a
+        href="https://philo52.com/">philo52</a>, <a
+        href="http://www.maphilosophie.fr/base_textes.php">maphilosophie</a>, <a
+        href="http://materiaphilosophica.blogspot.com/">materiaphilosophica</a>, …</p>
+  </div>
 
-<dl>
-  <dt>C1</dt>
-  <dd>Éthique et philosophie morale</dd>
-  <dt>C2</dt>
-  <dd>Philosophie de l'esprit</dd>
-  <dt>C3</dt>
-  <dd>Philosophie de la culture</dd>
-</dl>
-<dl>
-<dt>C4</dt>
-  <dd>Philosophie sociale et politique</dd>
-  <dt>C5</dt>
-  <dd>Épistémologie et métaphysique</dd>
-  <dt>C6</dt>
-  <dd>Philosophie du langage</dd>
-</dl>
+  <dl>
+    <dt>C1</dt>
+    <dd>Éthique et philosophie morale</dd>
+    <dt>C2</dt>
+    <dd>Philosophie de l'esprit</dd>
+    <dt>C3</dt>
+    <dd>Philosophie de la culture</dd>
+  </dl>
+  <dl>
+    <dt>C4</dt>
+    <dd>Philosophie sociale et politique</dd>
+    <dt>C5</dt>
+    <dd>Épistémologie et métaphysique</dd>
+    <dt>C6</dt>
+    <dd>Philosophie du langage</dd>
+  </dl>
 
-  <div id="content"><table id="textes" class="no-arrow"><thead><tr><th class="sortable-text">Auteur⸱e</th><th>Texte</th><th class="sortable-numeric favour-reverse">Score</th><th class="sortable-numeric favour-reverse">C1</th><th class="sortable-numeric favour-reverse">C2</th><th class="sortable-numeric favour-reverse">C3</th><th class="sortable-numeric favour-reverse">C4</th><th class="sortable-numeric favour-reverse">C5</th><th class="sortable-numeric favour-reverse">C6</th></tr></thead><tbody><tr><td></td><td>Utilisez l'outil de recherche ci-dessus : les textes qui correspondent à la recherche s'afficheront ci-dessous</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
-  
-    <p>Merci à <a href="https://github.com/freqdec">Frequency Decoder / Brian McAllister</a> pour le script “TableSort”<br> de tri automatique du tableau de données, sous licence<br> <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative commons Attribution-ShareAlike 2.5</a></p>
+  <div id="content">
+    <table id="textes" class="no-arrow">
+      <thead>
+        <tr>
+          <th class="sortable-text">Auteur⸱e</th>
+          <th>Texte</th>
+          <th class="sortable-numeric favour-reverse">Score</th>
+          <th class="sortable-numeric favour-reverse">C1</th>
+          <th class="sortable-numeric favour-reverse">C2</th>
+          <th class="sortable-numeric favour-reverse">C3</th>
+          <th class="sortable-numeric favour-reverse">C4</th>
+          <th class="sortable-numeric favour-reverse">C5</th>
+          <th class="sortable-numeric favour-reverse">C6</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td>Utilisez l'outil de recherche ci-dessus : les textes qui correspondent à la recherche s'afficheront
+            ci-dessous</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Merci à <a href="https://github.com/freqdec">Frequency Decoder / Brian McAllister</a> pour le script
+      “TableSort”<br> de tri automatique du tableau de données, sous licence<br> <a
+        href="http://creativecommons.org/licenses/by-sa/2.5/">Creative commons Attribution-ShareAlike 2.5</a></p>
   </div>
 </body>
 <script src="./js/parse_data-textes.min.js"></script>
+
 </html>
