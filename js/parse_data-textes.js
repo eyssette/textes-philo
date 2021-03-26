@@ -54,10 +54,10 @@ let checker = (arr, target) => target.every((v) => arr.includes(v));
 function handleInput(e) {
 	document.getElementsByTagName("tbody")[0].innerHTML = '<td></td><td><span class="loader"></span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>';
 	var searchInput = input.value.toLowerCase();
-	if (this.timer) {
+	/*if (this.timer) {
 		window.clearTimeout(this.timer);
 	}
-	this.timer = window.setTimeout(function() {
+	this.timer = window.setTimeout(function() {*/
 		if (searchInput.length>2) {
 		searchItems = searchInput.split("+");
 		tableBody = "<tbody>";
@@ -121,5 +121,5 @@ function handleInput(e) {
 	} else {
 		document.getElementsByTagName("tbody")[0].innerHTML = tableBodyStart;
 	}
-	}, 350);
+	/*}, 350);*/
 }
