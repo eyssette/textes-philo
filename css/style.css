@@ -237,23 +237,23 @@ dl {
     100% { transform: rotate(360deg); }
   }
 
-  @media screen and (max-device-width: 700px) {
+  @media only screen and (max-width: 700px) {
     #ongletRecherche {
-      font-size:14px;
+      font-size:14px!important;
     }
     #recherches p {
-      font-size:9pt;
+      font-size:9pt!important;
     }
     #recherches p:last-child {
-      font-size:8pt;
+      font-size:8pt!important;
     }
     dl {
-      font-size:9pt;
+      font-size:9pt!important;
     }
     #content table {
-      font-size:16px;
+      font-size:16px!important;
     }
     #content p{
-      font-size:8pt;
+      font-size:8pt!important;
     }
   }
