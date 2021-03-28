@@ -241,8 +241,8 @@ dl {
   
   @media only screen and (max-width:1000px) {
     #ongletRecherche {
+      max-width: 97%;
       font-size:14px;
-      margin: 10px auto;
     }
     #recherches p {
       font-size:9pt;
@@ -251,7 +251,7 @@ dl {
       font-size:8pt;
     }
     dl {
-      font-size:9pt;
+      font-size:8pt;
     }
     #content table {
       font-size:16px;
