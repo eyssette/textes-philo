@@ -29,7 +29,7 @@ h1 {
 }
 
 #recherches p {
-  max-width: 800px;
+  max-width: 900px;
   margin: 20px auto;
   font-size: 0.9em;
   font-style: italic;
@@ -241,7 +241,7 @@ dl {
   
   @media only screen and (max-width:1000px) {
     #ongletRecherche {
-      width:97%;
+      width:97%!important;
       font-size:14px;
     }
     #recherches p {
@@ -252,10 +252,15 @@ dl {
     }
     dl {
       font-size:8pt;
-      width:97%;
+      width:97%!important;
     }
     #content table {
-      font-size:16px;
+      font-size:12px;
+    }
+    #content table td:nth-child(2) {
+      font-size:14px;
+      padding-left:10px;
+      padding-right:10px;
     }
     #content p{
       font-size:8pt;
