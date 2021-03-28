@@ -112,11 +112,6 @@ th:nth-child(2), td:nth-child(2){
   padding-right:30px;
 }
 
-br {
-  display: block;
-  margin: 5px 0;
-  content: "";
-}
 
 thead tr:first-child {
   background: #ed1c40;
@@ -255,6 +250,10 @@ dl {
     dl {
       font-size:8pt;
     }
+    dl span::before {
+      content: "\A";
+      white-space: pre;
+    }
     #content table {
       font-size:12px;
     }
@@ -267,4 +266,5 @@ dl {
     #content p{
       font-size:8pt;
     }
+
   }
