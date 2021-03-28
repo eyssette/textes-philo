@@ -13,10 +13,13 @@
 <body>
   <h1>Textes philosophiques</h1>
   <div id="recherches">
-    <label for="recherche_dans_le_sujet">Rechercher dans le sujet :</label>
-    <input type="text" id="recherche_dans_le_sujet" name="recherche_dans_le_sujet" size="48"> <button
+    <div id="ongletRecherche">
+    <label for="recherche_dans_le_sujet">Recherche  :</label>
+    <input type="text" id="recherche_dans_le_sujet" name="recherche_dans_le_sujet"> <button
       id="rechercher">OK</button>
-    <p>Vous pouvez mettre par exemple <b>Spinoza+lib</b> pour rechercher tous les textes de Spinoza qui contiennent
+    </div>
+    <p>
+      Vous pouvez mettre par exemple <b>Spinoza+lib</b> pour rechercher tous les textes de – ou à propos de – Spinoza qui contiennent
       "lib" (pour "liberté", "libération", "libérer"…). Les textes sont automatiquement <b>classés par score de
         pertinence</b>, puis par auteur⸱e. Vous pouvez <b>cliquer sur un titre de colonne</b> pour changer l'ordre de
       classement : par auteur, par catégories, ou à nouveau par score de pertinence</p>
@@ -49,7 +52,7 @@
     <table id="textes" class="no-arrow">
       <thead>
         <tr>
-          <th class="sortable-text">Auteur⸱e</th>
+          <th class="sortable-text">Auteur&middot;e</th>
           <th>Texte</th>
           <th class="sortable-numeric favour-reverse">Score</th>
           <th class="sortable-numeric favour-reverse">C1</th>
@@ -77,7 +80,7 @@
     </table>
 
     <p>Merci à <a href="https://github.com/freqdec">Frequency Decoder / Brian McAllister</a> pour le script
-      “TableSort”<br> de tri automatique du tableau de données, sous licence<br> <a
+      “TableSort” de tri automatique du tableau de données, sous licence <a
         href="http://creativecommons.org/licenses/by-sa/2.5/">Creative commons Attribution-ShareAlike 2.5</a></p>
   </div>
 </body>

@@ -40,7 +40,6 @@ Promise.all(
 			boutonRecherche.style.visibility = 'visible';
 			moteurRecherche.disabled = false;
 			moteurRecherche.value = '';
-			moteurRecherche.setAttribute("size", "30");
 		}
 	)
 	.catch( //log the error
