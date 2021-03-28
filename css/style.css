@@ -21,8 +21,9 @@ h1 {
   max-width: 800px;
   text-align:center;
   margin: 20px auto;
-  font-size: 1.2em;
+  font-size: 1.2em!important;
 }
+
 #ongletRecherche input{
   width:60%;
 }
@@ -235,3 +236,5 @@ dl {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+  @media 
