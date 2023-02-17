@@ -31,7 +31,7 @@ export function reorganizeDataFunction(arrInit) {
 	/* Un exemple de regroupement */
 	return arrInit.map((element) => [
 		element[0],
-		element[2] + "<br/>" + element[1] + (element[3] ? element[3] : ""),
+		element[2] + "<br/>" + element[1] + (element[3] ? '<p>' + element[3] + '</p>' : ""),
 	]);
 }
 
